@@ -42,13 +42,9 @@
             z-index: 1000;
             padding: 1rem 0;
             border-bottom: 1px solid var(--light-blue);
-            transition: all 0.3s ease;
         }
 
-        nav:hover {
-            background: rgba(255, 255, 255, 1);
-            box-shadow: 0 2px 20px rgba(135, 206, 235, 0.3);
-        }
+
 
         nav ul {
             display: flex;
@@ -63,7 +59,6 @@
             font-weight: 500;
             padding: 0.5rem 1rem;
             border-radius: 25px;
-            transition: all 0.3s ease;
             position: relative;
             background: none;
             z-index: 1;
@@ -78,15 +73,11 @@
             left: 0;
         }
 
-        nav a:hover {
-            color: var(--white);
-            background: var(--gradient);
-            transform: translateY(-2px);
-        }
+
 
         /* Header Section */
         header {
-            min-height: 100vh;
+            min-height: 50vh;
             background: var(--gradient);
             display: flex;
             align-items: center;
@@ -94,6 +85,7 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+            margin-top: 40px;
         }
 
         header::before {
@@ -123,19 +115,17 @@
         }
 
         .profile-image {
-            width: 200px;
-            height: 200px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             background: var(--white);
-            margin: 0 auto 2rem;
+            margin: 0 auto 1rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 4rem;
+            font-size: 2.2rem;
             color: var(--primary-blue);
-            border: 5px solid var(--white);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
+            border: 3px solid var(--white);
             position: relative;
             overflow: hidden;
         }
@@ -152,36 +142,47 @@
             transition: transform 0.6s ease;
         }
 
-        .profile-image:hover {
-            transform: scale(1.05);
-        }
 
-        .profile-image:hover::before {
-            transform: rotate(45deg) translate(100%, 100%);
-        }
 
+
+
+        .hero-content h1 {
+            font-size: 2rem;
+            color: var(--white);
+            margin-bottom: 0.7rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
         .hero-content h1 {
             font-size: 3rem;
             color: var(--white);
             margin-bottom: 1rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            animation: slideInUp 1s ease-out;
         }
 
+        .hero-content .tagline {
+            font-size: 1rem;
+            color: var(--navy);
+            margin-bottom: 1.2rem;
+            font-style: italic;
+        }
         .hero-content .tagline {
             font-size: 1.2rem;
             color: var(--navy);
             margin-bottom: 2rem;
             font-style: italic;
-            animation: slideInUp 1s ease-out 0.3s both;
         }
 
         .contact-info {
             display: flex;
             justify-content: center;
+            gap: 1.2rem;
+            margin-top: 1.2rem;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: center;
             gap: 2rem;
             margin-top: 2rem;
-            animation: slideInUp 1s ease-out 0.6s both;
         }
 
         .contact-item {
@@ -190,25 +191,7 @@
             padding: 0.5rem 1rem;
             background: rgba(255, 255, 255, 0.9);
             border-radius: 25px;
-            transition: all 0.3s ease;
             font-weight: 500;
-        }
-
-        .contact-item:hover {
-            background: var(--white);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         /* Section Styles */
@@ -232,17 +215,7 @@
             position: relative;
         }
 
-        h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: var(--gradient);
-            border-radius: 2px;
-        }
+
 
         /* About Section */
         .about-content {
@@ -255,14 +228,9 @@
             background: var(--white);
             padding: 2rem;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(135, 206, 235, 0.1);
-            transition: transform 0.3s ease;
         }
 
-        .about-content:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(135, 206, 235, 0.2);
-        }
+
 
         /* Skills Grid */
         .skills-grid {
@@ -276,16 +244,9 @@
             background: var(--white);
             padding: 2rem;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(135, 206, 235, 0.1);
-            transition: all 0.3s ease;
-            border-left: 4px solid var(--primary-blue);
         }
 
-        .skill-category:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(135, 206, 235, 0.2);
-            border-left-color: var(--dark-blue);
-        }
+
 
         .skill-category h3 {
             color: var(--navy);
@@ -324,25 +285,12 @@
             background: var(--white);
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(135, 206, 235, 0.1);
-            transition: all 0.3s ease;
             position: relative;
         }
 
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--gradient);
-        }
 
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(135, 206, 235, 0.3);
-        }
+
+
 
         .project-content {
             padding: 2rem;
@@ -408,15 +356,10 @@
             background: var(--white);
             padding: 1.5rem;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(135, 206, 235, 0.1);
             position: relative;
-            transition: all 0.3s ease;
         }
 
-        .timeline-content:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(135, 206, 235, 0.2);
-        }
+
 
         .timeline-item::before {
             content: '';
@@ -453,9 +396,6 @@
             color: var(--white);
             text-align: center;
             padding: 3rem 0;
-            background-image: 
-                radial-gradient(circle at 20% 80%, rgba(135, 206, 235, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(135, 206, 235, 0.3) 0%, transparent 50%);
         }
 
         .footer-content {
@@ -477,52 +417,10 @@
             padding: 0.5rem 1rem;
             border: 1px solid var(--primary-blue);
             border-radius: 25px;
-            transition: all 0.3s ease;
         }
 
-        .footer-links a:hover {
-            background: var(--primary-blue);
-            transform: translateY(-2px);
-        }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                gap: 1rem;
-            }
 
-            .hero-content h1 {
-                font-size: 2rem;
-            }
-
-            .contact-info {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .timeline::before {
-                left: 20px;
-            }
-
-            .timeline-item {
-                width: calc(100% - 40px);
-                left: 40px !important;
-            }
-
-            .timeline-item::before {
-                left: -30px !important;
-            }
-
-            .skills-grid,
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            section {
-                padding: 3rem 1rem;
-            }
-        }
 
         @media (max-width: 480px) {
             .hero-content h1 {
@@ -700,19 +598,17 @@
 
     <footer id="contact">
         <div class="footer-content">
-            <h2 style="color: white; font-weight: bold;">Mari Berkolaborasi!</h2>
-            <p style="margin-bottom: 2.5rem; margin-top: 1.5rem;">
-                Saya selalu terbuka untuk diskusi mengenai proyek-proyek menarik, peluang magang, atau sekadar berbagi ide tentang teknologi.
-            </p>
             <div class="footer-links" style="margin-bottom: 2.5rem;">
-                <a href="mailto:nataliadesiany@gmail.com">Email Saya</a>
-                <a href="tel:0858-1080-0178">Hubungi Saya</a>
+                <a href="mailto:nataliadesiany@gmail.com">Email</a>
                 <a href="https://www.linkedin.com/in/nataliadesiany/" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 0.5rem;">
                     LinkedIn
                 </a>
             </div>
-            <p>&copy; 2025 Natalia Desiany Nursimin.</p>
+            <p>&copy; 2025 Natalia Desiany Nursimin</p>
         </div>
+    </footer>
+</body>
+</html>
     </footer>
 </body>
 </html>
